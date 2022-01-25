@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  react-new-prod:
+    container_name: react-new-prod
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - '1337:80'
+
+      # docker-compose -f docker-compose.prod.yml up -d --build
